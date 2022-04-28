@@ -1,6 +1,4 @@
 package com.texas.studentstatus.controller;
-
-import com.texas.studentstatus.dto.AdminDto;
 import com.texas.studentstatus.dto.TeacherDto;
 import com.texas.studentstatus.dto.response.ResponseDto;
 import com.texas.studentstatus.service.teacher.TeacherService;
@@ -26,13 +24,13 @@ public class TeacherController extends BaseController{
     //find by id
     @GetMapping("/{id}")
     public ResponseEntity<ResponseDto> findTeacherById(@PathVariable Integer id) {
-        return ResponseEntity.ok(successResponse("Data found",teacherService.findTeacherById(id)));
+        return ResponseEntity.ok(successResponse("Teacher data",teacherService.findTeacherById(id)));
     }
 
     //find all
     @GetMapping("/all")
     public ResponseDto findAllTeachers() {
-        return successResponse("Data found",teacherService.findAllTeachers());
+        return successResponse("Teacher data",teacherService.findAllTeachers());
     }
 
     //delete

@@ -28,12 +28,16 @@ public class StudentDto {
     @NotEmpty
     private String address;
 
+    @NotEmpty
+    private String password;
+
     public StudentDto(Student student){
         this.id = student.getId();
         this.name = student.getName();
         this.address = student.getAddress();
         this.email = student.getEmail();
         this.contact = student.getContact();
+        this.password = student.getPassword();
 
     }
     public static List<StudentDto> toDto(List<Student> dto){

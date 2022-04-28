@@ -33,6 +33,7 @@ public class StudentServiceImpl implements StudentService {
         student.setAddress(studentDto.getAddress());
         student.setContact(studentDto.getContact());
         student.setEmail(studentDto.getEmail());
+        student.setPassword(studentDto.getPassword());
         return new StudentDto(studentRepo.save(student));
     }
 

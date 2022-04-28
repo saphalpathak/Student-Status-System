@@ -25,13 +25,13 @@ public class SubjectController extends BaseController {
     //find by id
     @GetMapping("/{id}")
     public ResponseEntity<ResponseDto> findAdminById(@PathVariable Integer id) {
-        return ResponseEntity.ok(successResponse("Data found",subjectService.findSubjectById(id)));
+        return ResponseEntity.ok(successResponse("Subject data",subjectService.findSubjectById(id)));
     }
 
     //find all
     @GetMapping("/all")
     public ResponseDto findAllAdmins() {
-        return successResponse("Data found",subjectService.findAllSubject());
+        return successResponse("Subject data",subjectService.findAllSubject());
     }
 
     //delete

@@ -26,13 +26,13 @@ public class AdminController extends BaseController{
     //find by id
     @GetMapping("/{id}")
     public ResponseEntity<ResponseDto> findAdminById(@PathVariable Integer id) {
-        return ResponseEntity.ok(successResponse("Data found",adminService.findAdminById(id)));
+        return ResponseEntity.ok(successResponse("Admin data",adminService.findAdminById(id)));
     }
 
     //find all
     @GetMapping("/all")
     public ResponseDto findAllAdmins() {
-        return successResponse("Data found",adminService.findAllAdmins());
+        return successResponse("Admin data",adminService.findAllAdmins());
     }
 
     //delete

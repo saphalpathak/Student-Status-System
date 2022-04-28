@@ -25,13 +25,13 @@ public class StudentController extends BaseController{
     //find by id
     @GetMapping("/{id}")
     public ResponseEntity<ResponseDto> findStudentById(@PathVariable Integer id) {
-            return ResponseEntity.ok(successResponse("Data found",service.findStudentById(id)));
+            return ResponseEntity.ok(successResponse("Student data",service.findStudentById(id)));
     }
 
     //find all
     @GetMapping("/all")
     public ResponseDto findAllStudents() {
-        return successResponse("Data found",service.findAllStudents());
+        return successResponse("Student data",service.findAllStudents());
     }
 
     //delete
