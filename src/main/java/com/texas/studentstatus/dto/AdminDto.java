@@ -2,8 +2,6 @@ package com.texas.studentstatus.dto;
 
 import com.texas.studentstatus.entity.Admin;
 import lombok.*;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
