@@ -45,4 +45,9 @@ public class TeacherController extends BaseController{
     public ResponseDto updateTeacher(@Valid @RequestBody TeacherDto teacherDto){
         return successResponse("Teacher successfully Updated",teacherService.saveTeacher(teacherDto));
     }
+
+    @GetMapping("/apple")
+    public String apple(){
+        return "apple";
+    }
 }

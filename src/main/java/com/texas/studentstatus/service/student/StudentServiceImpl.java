@@ -1,4 +1,5 @@
 package com.texas.studentstatus.service.student;
+
 import com.texas.studentstatus.dto.StudentDto;
 import com.texas.studentstatus.entity.Student;
 import com.texas.studentstatus.exceptions.ResourceNotFoundException;
@@ -24,9 +25,9 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public StudentDto saveStudent(StudentDto studentDto) {
         Student student = new Student();
-        if(studentDto.getId()!=null && studentDto.getId()!=0){
-            student=studentRepo.findById(studentDto.getId()).orElseThrow(
-                    ()->new RuntimeException("Invalid Id")
+        if (studentDto.getId() != null && studentDto.getId() != 0) {
+            student = studentRepo.findById(studentDto.getId()).orElseThrow(
+                    () -> new RuntimeException("Invalid Id: " + studentDto.getId())
             );
         }
         student.setName(studentDto.getName());
@@ -40,15 +41,15 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public StudentDto findStudentById(Integer id) {
         Student student = studentRepo.findById(id).orElseThrow(
-                ()-> new ResourceNotFoundException("Student","id",id)
+                () -> new ResourceNotFoundException("Student", "id", id)
         );
         return new StudentDto(student);
     }
 
     @Override
-    public void deleteStudentById(Integer id){
+    public void deleteStudentById(Integer id) {
         studentRepo.findById(id).orElseThrow(
-                ()->new RuntimeException("Invalid Id")
+                () -> new RuntimeException("Invalid Id")
         );
         studentRepo.deleteById(id);
     }
