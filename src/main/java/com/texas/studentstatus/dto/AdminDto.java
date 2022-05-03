@@ -6,6 +6,7 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//admin dto
 @Getter
 @Setter
 @AllArgsConstructor
