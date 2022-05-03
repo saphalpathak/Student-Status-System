@@ -27,7 +27,7 @@ public class SubjectServiceImpl implements SubjectService {
         Subject subject = new Subject();
         if (subjectDto.getId() != null && subjectDto.getId() != 0) {
             subject = subjectRepo.findById(subjectDto.getId()).orElseThrow(
-                    ()-> new ResourceNotFoundException("Subject","id",subjectDto.getId())
+                    ()-> new RuntimeException(("Invalid Id: "+ subjectDto.getId()))
             );
         }
         subject.setName(subjectDto.getName());

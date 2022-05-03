@@ -30,6 +30,4 @@ public class Admin {
     private String address;
 
     private String password;
-
-
 }
