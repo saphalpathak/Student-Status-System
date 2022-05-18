@@ -30,6 +30,7 @@ public class TeacherServiceImpl implements TeacherService{
                     ()-> new ResourceNotFoundException("Teacher","id",teacherDto.getId())
             );
         }
+        teacher.setName(teacherDto.getName());
         teacher.setAddress(teacherDto.getAddress());
         teacher.setContact(teacherDto.getContact());
         teacher.setEmail(teacherDto.getEmail());

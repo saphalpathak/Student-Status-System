@@ -1,7 +1,6 @@
 package com.texas.studentstatus.controller;
 
 import com.texas.studentstatus.dto.AdminDto;
-import com.texas.studentstatus.dto.StudentDto;
 import com.texas.studentstatus.dto.response.ResponseDto;
 import com.texas.studentstatus.service.admin.AdminService;
 import org.springframework.http.ResponseEntity;
